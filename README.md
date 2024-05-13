@@ -1,41 +1,41 @@
-# Project Title
+# MetacraftersFunctionsAndErrors
+This assessment demonstrates a smart contract that implements the require(), assert(), and revert() statements.
 
-Simple overview of use/purpose.
+# Description
+Solidity has numerous error-handling features. Runtime or compile-time errors are also possible. Runtime mistakes are more harder to detect and mostly arise during contract execution, whereas syntax problems are checked during compile time when Solidity is turned to byte code.
 
-## Description
+# Getting Started
+To run this code go to https://remix.ethereum.org/. Create a new file (example FunctionsandErrors.sol) and paste the code below
+// SPDX-License-Identifier: UNLICENSED
 
-An in-depth paragraph about your project and overview of use.
+pragma solidity ^0.8.25;
 
-## Getting Started
+contract FunctionsAndErrors {
+   
+   function requireNum(uint256 _num) public pure returns(uint256){
 
-### Installing
+    uint256 minValue = 1;
+    require(_num > minValue, "Number must be greater than 1");
+    return _num;
+   }
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+   function assertNum(uint256 _num) public pure returns(uint256) {
 
-### Executing program
+    uint256 valueIncrease = 5;
+    uint256 result = _num + valueIncrease;
+    assert(result > _num);
+    return result;
+   }
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+   function revertError() public pure {
+    string memory errorMessage = "This transaction has been reverted.";
+    revert(errorMessage);
 
-## Help
+   }
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
-
-## Authors
-
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+}
 
 
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+# Author
+Lusaya, Maria Carmela J.
+Email: 8210131@ntc.edu.ph
