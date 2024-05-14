@@ -1,41 +1,16 @@
-# MetacraftersFunctionsAndErrors
-This assessment demonstrates a smart contract that implements the require(), assert(), and revert() statements.
+# Functions-Errors
+ETH + AVAX PROOF: Intermediate EVM Course Module 1: Functions and Errors - The smart contract program utilizes the assert and revert functions, as well as the require statements.
 
 # Description
-Solidity has numerous error-handling features. Runtime or compile-time errors are also possible. Runtime mistakes are more harder to detect and mostly arise during contract execution, whereas syntax problems are checked during compile time when Solidity is turned to byte code.
+The Smart Contract is made to handle a single value on Ethereum. This code demonstrates a error handling practices using different statements to protect data and avoid errors. This also handles one value securely by using require, assert, and revert statements, ensuring it's reliabilty. This contract provides useful lessons in building safe and reliable smart contracts for decentralized transactions within Web3.
 
-# Getting Started
-To run this code go to https://remix.ethereum.org/. Create a new file (example FunctionsandErrors.sol) and paste the code below
-// SPDX-License-Identifier: UNLICENSED
+# Program Execution
+The initial requirement to run this program is by using Remix Ethereum IDE (https://remix.ethereum.org/), and create a new file that utilizes solidity (".sol") as its programming language.
 
-pragma solidity ^0.8.25;
+The program demonstrates the usage of require to validate input conditions, assert to verify assumptions, and revert to revert transactions with custom error messages. Through Remix Ethereum IDE, you can conduct testing with these functions and gain insights into their behavior. To test the contract, interact with the setValue function using different input values to see how the require function validates conditions. Also, try calling the assertValue and revertValue functions with various inputs to understand how assert verifies assumptions and revert handles transactions with custom error messages. Through these interactions, you can explore the functionality of the require, assert, and revert functions in the contract.
 
-contract FunctionsAndErrors {
-   
-   function requireNum(uint256 _num) public pure returns(uint256){
-
-    uint256 minValue = 1;
-    require(_num > minValue, "Number must be greater than 1");
-    return _num;
-   }
-
-   function assertNum(uint256 _num) public pure returns(uint256) {
-
-    uint256 valueIncrease = 5;
-    uint256 result = _num + valueIncrease;
-    assert(result > _num);
-    return result;
-   }
-
-   function revertError() public pure {
-    string memory errorMessage = "This transaction has been reverted.";
-    revert(errorMessage);
-
-   }
-
-}
-
-
-# Author
-Lusaya, Maria Carmela J.
-Email: 8210131@ntc.edu.ph
+# Additional Information
+> Student Number: 8215752
+>> Student Email Address: 8215752@ntc.edu.ph
+>>> Student Name: Brian Allen Lusanta Mayor
+>>>> School: National Teachers College
