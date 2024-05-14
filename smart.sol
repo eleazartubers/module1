@@ -1,32 +1,24 @@
-    // SPDX-License-Identifier: UNLICENSED
-
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.25;
 
-contract FunctionsAndErrors {
-    uint256 public totalSupply;
-    
-    constructor(uint256 _initialSupply) {
-        require(_initialSupply > 0, "Initial supply must be greater than zero");
-        totalSupply = _initialSupply;
+contract SmartContract {
+    uint256 public num;
+
+    function setNum(uint256 _newNum) external {
+        require(_newNum >= 200 && _newNum <= 1000, "You can only enter up to 200 but cannot be above 1000");
+        num = _newNum;
     }
-    
-    function increaseSupply(uint256 _amount) public {
-        uint256 newTotalSupply = totalSupply + _amount;
-        require(newTotalSupply > totalSupply, "Overflow detected");
-        totalSupply = newTotalSupply;
+
+    function assertNum(uint256 _val) external pure returns (uint256) {
+        assert(_val >= 200 && _val <=1000);
+        return _val;
     }
-    
-    function assertExample(uint256 _value) public pure returns (uint256) {
-        uint256 result = _value * 2;
-        assert(result > _value);
-        return result;
-    }
-    
-    function revertExample(uint256 _value) public pure returns (uint256) {
-        require(_value != 0, "Value cannot be zero");
-        if (_value > 100) {
-            revert("Value exceeds maximum limit");
+
+    function revertVal(uint256 _val) external pure returns (uint256) {
+        if (_val >= 100 && _val <=1000) {
+            revert("Value must between 200 and 1000");
         }
-        return _value * 2;
+
+        return _val;
     }
 }
