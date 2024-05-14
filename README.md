@@ -2,15 +2,15 @@
 ETH + AVAX PROOF: Intermediate EVM Course Module 1: Functions and Errors - The smart contract program utilizes the assert and revert functions, as well as the require statements.
 
 # Description
-The Smart Contract is made to handle a single value on Ethereum. This code demonstrates a error handling practices using different statements to protect data and avoid errors. This also handles one value securely by using require, assert, and revert statements, ensuring it's reliabilty. This contract provides useful lessons in building safe and reliable smart contracts for decentralized transactions within Web3.
+A smart contract is a self-executing program that automates the actions required in an agreement or contract. Once completed, the transactions are trackable and irreversible. The best way to envision a smart contract is to think of a vending machine—when you insert the correct amount of money and push an item's button, the program (the smart contract) activates the machine to dispense your chosen item.
 
 # Program Execution
 The initial requirement to run this program is by using Remix Ethereum IDE (https://remix.ethereum.org/), and create a new file that utilizes solidity (".sol") as its programming language.
 
-The program demonstrates the usage of require to validate input conditions, assert to verify assumptions, and revert to revert transactions with custom error messages. Through Remix Ethereum IDE, you can conduct testing with these functions and gain insights into their behavior. To test the contract, interact with the setValue function using different input values to see how the require function validates conditions. Also, try calling the assertValue and revertValue functions with various inputs to understand how assert verifies assumptions and revert handles transactions with custom error messages. Through these interactions, you can explore the functionality of the require, assert, and revert functions in the contract.
+The program demonstrates the use of need to test input conditions, assert to verify assumptions, and revert to return transactions with custom error messages. Remix Ethereum IDE allows you to test these functions and acquire insights into their behavior. To test the contract, call the setNum function with various input values to check how the require function validates conditions. Also, experiment with the assertNum and revertNum methods with different inputs to see how assert validates assumptions and reversal manages transactions with custom error messages. These interactions allow you to test the functionality of the contract's require, assert, and revert methods.
 
 # Additional Information
-> Student Number: 8215752
->> Student Email Address: 8215752@ntc.edu.ph
->>> Student Name: Brian Allen Lusanta Mayor
+> Student Number: 422003221
+>> Student Email Address: 422003221@ntc.edu.ph
+>>> Student Name: Jhon Eleazar Pacquiao Tuburan
 >>>> School: National Teachers College
